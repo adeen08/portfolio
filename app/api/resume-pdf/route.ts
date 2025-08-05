@@ -1,20 +1,20 @@
-import { NextResponse } from "next/server"
-import path from "path"
-import fs from "fs"
+import { NextResponse } from "next/server";
+import path from "path";
+import fs from "fs";
 
 export async function GET() {
   try {
-    const pdfPath = path.join(process.cwd(), 'public', 'giovani-resume.pdf')
-    const pdfBuffer = fs.readFileSync(pdfPath)
-    
+    const pdfPath = path.join(process.cwd(), "public", "Adeen-Amir-WebDev.pdf");
+    const pdfBuffer = fs.readFileSync(pdfPath);
+
     return new NextResponse(pdfBuffer, {
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": 'inline; filename="giovani-resume.pdf"',
+        "Content-Disposition": 'inline; filename="Adeen-Amir-WebDev.pdf"',
       },
-    })
+    });
   } catch (error) {
-    console.error("Error serving PDF:", error)
-    return NextResponse.json({ error: "Failed to serve PDF" }, { status: 500 })
+    console.error("Error serving PDF:", error);
+    return NextResponse.json({ error: "Failed to serve PDF" }, { status: 500 });
   }
 }

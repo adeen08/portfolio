@@ -1,15 +1,15 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Briefcase, MapPin, User } from "lucide-react"
-import { ResumeDownloadButton } from "@/components/resume-download-button"
-import resumeData from "@/data/resume-data"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, MapPin, User } from "lucide-react";
+import { ResumeDownloadButton } from "@/components/resume-download-button";
+import resumeData from "@/data/resume-data";
 
 export const metadata = {
   title: "Resume",
   description: `Professional experience, skills, and qualifications of ${resumeData.personalInfo.name}, ${resumeData.personalInfo.title}.`,
-}
+};
 
 export default function ResumePage() {
   return (
@@ -19,7 +19,9 @@ export default function ResumePage() {
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
             <div>
               <h1 className="text-4xl font-bold">Resume</h1>
-              <p className="text-xl text-muted-foreground">My professional experience and qualifications</p>
+              <p className="text-xl text-muted-foreground">
+                My professional experience and qualifications
+              </p>
             </div>
             <ResumeDownloadButton />
           </div>
@@ -27,7 +29,8 @@ export default function ResumePage() {
           <div className="space-y-4">
             <h2 className="text-2xl font-bold">Summary</h2>
             <p>
-              {resumeData.personalInfo.yearsOfExperience} and {resumeData.personalInfo.teamLeadExperience}
+              {resumeData.personalInfo.yearsOfExperience} and{" "}
+              {resumeData.personalInfo.teamLeadExperience}
             </p>
           </div>
 
@@ -63,23 +66,33 @@ export default function ResumePage() {
               <CardContent className="p-6 space-y-4">
                 <div>
                   <h3 className="font-semibold">Languages & Frameworks</h3>
-                  <p className="text-muted-foreground">{resumeData.skills.languages.join(", ")}</p>
+                  <p className="text-muted-foreground">
+                    {resumeData.skills.languages.join(", ")}
+                  </p>
                 </div>
                 <div>
                   <h3 className="font-semibold">Architecture & Patterns</h3>
-                  <p className="text-muted-foreground">{resumeData.skills.architecture.join(", ")}</p>
+                  <p className="text-muted-foreground">
+                    {resumeData.skills.architecture.join(", ")}
+                  </p>
                 </div>
                 <div>
                   <h3 className="font-semibold">Cloud & DevOps</h3>
-                  <p className="text-muted-foreground">{resumeData.skills.cloud.join(", ")}</p>
+                  <p className="text-muted-foreground">
+                    {resumeData.skills.cloud.join(", ")}
+                  </p>
                 </div>
                 <div>
                   <h3 className="font-semibold">Data & Messaging</h3>
-                  <p className="text-muted-foreground">{resumeData.skills.data.join(", ")}</p>
+                  <p className="text-muted-foreground">
+                    {resumeData.skills.data.join(", ")}
+                  </p>
                 </div>
                 <div>
                   <h3 className="font-semibold">Quality</h3>
-                  <p className="text-muted-foreground">{resumeData.skills.quality.join(", ")}</p>
+                  <p className="text-muted-foreground">
+                    {resumeData.skills.quality.join(", ")}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -96,7 +109,11 @@ export default function ResumePage() {
                     <p className="text-muted-foreground">{publication.year}</p>
                     <p className="mt-2">{publication.description}</p>
                     {publication.link && (
-                      <Link href={publication.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      <Link
+                        href={publication.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline">
                         Read More
                       </Link>
                     )}
@@ -131,7 +148,7 @@ export default function ResumePage() {
           <div className="sticky top-20">
             <div className="rounded-lg overflow-hidden mb-6">
               <Image
-                src={resumeData.personalInfo.photo || "/images/profile.png"}
+                src={resumeData.personalInfo.photo || "/images/profile.jpeg"}
                 alt={resumeData.personalInfo.name}
                 width={300}
                 height={400}
@@ -151,23 +168,35 @@ export default function ResumePage() {
                 <MapPin className="h-5 w-5 text-primary" />
                 <span>{resumeData.personalInfo.location}</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Link href={resumeData.personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              {/* <div className="flex items-center gap-2">
+                <Link
+                  href={resumeData.personalInfo.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline">
                   LinkedIn
                 </Link>
               </div>
               {resumeData.personalInfo.github && (
                 <div className="flex items-center gap-2">
-                  <Link href={resumeData.personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  <Link
+                    href={resumeData.personalInfo.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline">
                     GitHub
                   </Link>
                 </div>
               )}
               <div className="flex items-center gap-2">
-                <Link href={resumeData.personalInfo.website} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <Link
+                  href={resumeData.personalInfo.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline">
                   Website
                 </Link>
-              </div>
+              </div> */}
             </div>
             <div className="mt-6">
               <Link href="/contact">
@@ -178,5 +207,5 @@ export default function ResumePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

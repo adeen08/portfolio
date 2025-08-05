@@ -1,19 +1,20 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Github, Linkedin, Mail, MapPin } from "lucide-react"
-import Link from "next/link"
-import resumeData from "@/data/resume-data"
+import { Card, CardContent } from "@/components/ui/card";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+import resumeData from "@/data/resume-data";
 
 export const metadata = {
   title: "Contact",
-  description: `Get in touch with Giovani Moutinho for opportunities, collaborations, or just to say hello.`,
-}
+  description: `Get in touch with Adeen Amir for opportunities, collaborations, or just to say hello.`,
+};
 
 export default function ContactPage() {
   // Ensure we have the personal info data with fallbacks
-  const email = resumeData?.personalInfo?.email || "contact@mgiovani.com"
-  const location = resumeData?.personalInfo?.location || "Brazil"
-  const github = resumeData?.personalInfo?.github || "github.com/mgiovani"
-  const linkedin = resumeData?.personalInfo?.linkedin || "linkedin.com/in/mgiovani"
+  const email = resumeData?.personalInfo?.email || "adeenamir08.com";
+  const location = resumeData?.personalInfo?.location || "Karachi, Pakistan";
+  const github = resumeData?.personalInfo?.github || "github.com/adeen08";
+  const linkedin =
+    resumeData?.personalInfo?.linkedin || "linkedin.com/in/adeen-amir";
 
   return (
     <div className="container py-12">
@@ -34,7 +35,9 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 text-white mt-0.5" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href={`mailto:${email}`} className="text-zinc-400 hover:text-white">
+                    <a
+                      href={`mailto:${email}`}
+                      className="text-zinc-400 hover:text-white">
                       {email}
                     </a>
                   </div>
@@ -58,8 +61,7 @@ export default function ContactPage() {
                   href={`https://${github}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 rounded-md px-4 py-2 transition-colors"
-                >
+                  className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 rounded-md px-4 py-2 transition-colors">
                   <Github className="h-5 w-5" />
                   GitHub
                 </Link>
@@ -67,15 +69,13 @@ export default function ContactPage() {
                   href={`https://${linkedin}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 rounded-md px-4 py-2 transition-colors"
-                >
+                  className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 rounded-md px-4 py-2 transition-colors">
                   <Linkedin className="h-5 w-5" />
                   LinkedIn
                 </Link>
                 <Link
                   href={`mailto:${email}`}
-                  className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 rounded-md px-4 py-2 transition-colors"
-                >
+                  className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 rounded-md px-4 py-2 transition-colors">
                   <Mail className="h-5 w-5" />
                   Email
                 </Link>
@@ -85,5 +85,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

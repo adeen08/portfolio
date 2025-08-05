@@ -1,187 +1,175 @@
 export type WorkExperience = {
-  title: string
-  company: string
-  period: string
-  location: string
-  responsibilities: string[]
-}
+  title: string;
+  company: string;
+  period: string;
+  location: string;
+  responsibilities: string[];
+};
 
 export type Language = {
-  name: string
-  level: string
-  certificate?: string
-}
+  name: string;
+  level: string;
+  certificate?: string;
+};
 
 export type Publication = {
-  title: string
-  description: string
-  year: string
-  link?: string
-}
+  title: string;
+  description: string;
+  year: string;
+  link?: string;
+};
 
 export type ResumeData = {
   personalInfo: {
-    name: string
-    title: string
-    email: string
-    location: string
-    linkedin: string
-    github: string | null
-    website: string
-    photo?: string
-    yearsOfExperience: string
-    teamLeadExperience: string
-  }
-  summary: string[]
+    name: string;
+    title: string;
+    email: string;
+    location: string;
+    linkedin: string;
+    github: string | null;
+    website: string;
+    photo?: string;
+    yearsOfExperience: string;
+    teamLeadExperience: string;
+  };
+  summary: string[];
   skills: {
-    languages: string[]
-    architecture: string[]
-    cloud: string[]
-    data: string[]
-    quality: string[]
-  }
-  experience: WorkExperience[]
-  hardSkills: string[]
-  softSkills: string[]
-  languages: Language[]
-  publications: Publication[]
-}
+    languages: string[];
+    architecture: string[];
+    cloud: string[];
+    data: string[];
+    quality: string[];
+  };
+  experience: WorkExperience[];
+  hardSkills: string[];
+  softSkills: string[];
+  languages: Language[];
+  publications: Publication[];
+};
 
 const resumeData: ResumeData = {
   personalInfo: {
-    name: "Giovani Moutinho",
-    title: "Senior Software Engineer",
-    email: "contact@mgiovani.com",
-    location: "Brazil",
-    linkedin: "https://www.linkedin.com/in/mgiovani",
-    github: "https://github.com/mgiovani/",
-    website: "https://mgiovani.com",
-    photo: "/images/profile.png",
-    yearsOfExperience: "13+ years of coding experience",
-    teamLeadExperience: "5+ years leading backend teams on Python, FastAPI, Django, and AWS",
+    name: "Adeen Amir",
+    title: "Full Stack Developer & AI Engineer",
+    email: "adeenamir08@gmail.com",
+    location: "Karachi, Pakistan",
+    linkedin: "www.linkedin.com/in/adeen-amir",
+    github: "github.com/adeen08",
+    website: "", // Replace with Adeen's actual site if available
+    photo: "/images/profile.jpeg",
+    yearsOfExperience:
+      "2+ years of software development experience as a freelancer",
+    teamLeadExperience:
+      "Led multiple projects in academic and internship settings",
   },
-  summary: ["13+ years of coding experience and 5+ years leading backend teams on Python, FastAPI, Django, and AWS"],
+  summary: [
+    "Full Stack Developer and AI enthusiast with hands-on experience in web development, NLP pipelines, and cloud-powered solutions.",
+  ],
   skills: {
-    languages: ["Python", "FastAPI", "SQLAlchemy", "Django REST", "TypeScript", "Node.js", "Express"],
-    architecture: ["Clean Code/Architecture", "DDD", "Microservices", "Pub/Sub", "BFF", "REST", "GraphQL"],
-    cloud: ["AWS – ECS, Lambda, RDS, S3", "Docker", "Kubernetes", "GitHub Actions"],
-    data: ["PostgreSQL", "Redis", "Celery"],
-    quality: ["TDD", "Pytest", "Ruff", "CI/CD"],
+    languages: [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "SQL",
+      "C++",
+      "C",
+      "React",
+      "Next.js",
+      "Node.js",
+      "React Native",
+      "FastAPI",
+      "OpenAI",
+      "Cheerio",
+      "Supabase",
+      "Tailwind",
+      "Tensorflow",
+      "Sickit-learn",
+      "NumPy",
+      "Pandas",
+      "Expo",
+      "Flask",
+    ],
+    architecture: ["MVC", "REST", "Microservices", "Clean Code"],
+    cloud: ["Supabase", "NeonDB", "Firebase", "Vercel"],
+    data: ["PostgreSQL", "MongoDB", "MySQL", "Pandas", "OpenCV"],
+    quality: ["Jest", "Mocha/Chai", "SonarQube", "Pino"],
   },
   experience: [
     {
-      title: "Senior Software Engineer",
-      company: "Prenuvo",
-      period: "Jan 2023 - Present",
-      location: "Remote, United States",
+      title: "Data Science Intern",
+      company: "Systems Limited",
+      period: "Jul 2023 - Aug 2023",
+      location: "Lahore, Pakistan",
       responsibilities: [
-        "Implemented performance enhancements that cut response times by 25% through optimized database access and resource management.",
-        "Designed and built backend support for AI-powered tools used by radiologists, boosting workflow efficiency.",
-        "Created and rolled out a self-service discount system, giving Sales fine-grained control over promotions.",
-        "Led an external-service integration that improved operational efficiency and contributed to seasonal revenue gains.",
+        "Built an NLP pipeline using BERT to extract insights from transcribed conversations.",
+        "Applied lemmatization and stemming to improve data accuracy.",
+        "Created and delivered software proposal presentations for clients.",
       ],
     },
     {
-      title: "Software Engineer",
-      company: "Perflo",
-      period: "Nov 2021 - Nov 2022",
-      location: "Remote, United States",
+      title: "Web Development Intern",
+      company: "10Pearls",
+      period: "Jun 2024 - Aug 2024",
+      location: "Karachi, Pakistan",
       responsibilities: [
-        "Built an asynchronous processing mechanism with Celery and Redis, enabling seamless background task handling.",
-        "Engineered a Microsoft Teams bot to collect critical user data and integrate it into the main web application.",
-        "Developed RESTful APIs with Django and DRF to ensure secure, efficient data transfer.",
+        "Developed a full-stack web application using Next.js, Node.js, and MongoDB.",
+        "Integrated robust testing with Jest and Mocha/Chai, and logging with Pino.",
+        "Performed static code analysis using SonarQube.",
       ],
     },
     {
-      title: "Software Engineer",
-      company: "Olist",
-      period: "Jun 2020 - Oct 2021",
-      location: "Remote, Brazil",
+      title: "Full Stack Developer",
+      company: "PowerUp Global",
+      period: "Jan 2025 - Jun 2025",
+      location: "Remote",
       responsibilities: [
-        "Developed RESTful APIs and microservices using a pub/sub architecture, increasing system scalability.",
-        "Modernized legacy apps by refactoring code and improving database interactions, lowering latency.",
-        "Implemented a Backend-for-Frontend layer with Node.js and Express, improving performance and simplifying client development.",
-        "Provided onboarding and mentoring for new team members, ensuring alignment with best practices.",
+        "Redesigned the PowerUp website frontend using Next.js, React.js, and Tailwind CSS.",
+        "Integrated the mobile app with Apple HealthKit and Android Health Connect via React Native and Expo to sync health data.",
+        "Developed an AI-powered feature to extract and analyze blood pressure data from images of medical devices, automating user input on both platforms.",
       ],
     },
     {
-      title: "Full-Stack Engineer (Part-Time)",
-      company: "Advogar",
-      period: "Aug 2019 - Oct 2021",
-      location: "Remote, Brazil",
+      title: "Event Coordinator",
+      company: "Project Topi",
+      period: "May 2024 - Jun 2025",
+      location: "GIKI, Topi, Pakistan",
       responsibilities: [
-        "Added advanced image processing and third-party integrations to expand API capabilities.",
-        "Led backend integration between core services, ensuring consistent data flow.",
-      ],
-    },
-    {
-      title: "Development Team Lead & Software Developer",
-      company: "Justiça Fácil",
-      period: "Mar 2019 - Jul 2020",
-      location: "Remote, Brazil",
-      responsibilities: [
-        "Coordinated a distributed team to deliver high-priority features on schedule.",
-        "Built asynchronous web crawlers that reduced specific search tasks from two hours to two minutes.",
-        "Developed features that streamlined QA workflows, saving up to eight hours per tester each week.",
+        "Managed a budget of over PKR 300,000 for welfare events.",
+        "Led bi-monthly aid programs benefiting struggling workers.",
+        "Organized career counseling and skill development sessions for 150+ underprivileged students.",
       ],
     },
   ],
   hardSkills: [
-    "Python",
-    "FastAPI",
-    "SQLAlchemy",
-    "Django REST",
-    "TypeScript",
+    "React",
+    "Next.js",
     "Node.js",
-    "Express",
-    "Clean Architecture",
-    "DDD",
-    "Microservices",
-    "AWS",
-    "Docker",
-    "Kubernetes",
-    "PostgreSQL",
-    "Redis",
-    "Celery",
-    "TDD",
-    "Pytest",
+    "React Native",
+    "FastAPI",
+    "OpenAI",
+    "Cheerio",
+    "Supabase",
+    "Tailwind",
+    "Tensorflow",
+    "Sickit-learn",
+    "NumPy",
+    "Pandas",
+    "Expo",
+    "Flask",
   ],
   softSkills: [
-    "Problem Solving",
-    "Remote Collaboration",
-    "Adaptability",
-    "Critical Thinking",
     "Communication",
-    "Team Leadership",
+    "Problem Solving",
+    "Teamwork",
+    "Leadership",
+    "Adaptability",
+    "Project Management",
   ],
   languages: [
-    {
-      name: "Portuguese",
-      level: "Native",
-    },
-    {
-      name: "English",
-      level: "Professional (C2 Proficient)",
-      certificate: "EF SET English Certificate 82/100 (C2 Proficient)",
-    },
+    { name: "English", level: "Professional" },
+    { name: "Urdu", level: "Native" },
   ],
-  publications: [
-    {
-      title: "Estratégias Pedagógicas para o Processo de Ensino-Aprendizagem de Algoritmos",
-      description: "A publication exploring pedagogical strategies for teaching and learning algorithms.",
-      year: "2019",
-    },
-    {
-      title: "Estudos de Técnicas de Mineração de Dados Aplicadas em Ambientes Sistematizados de Bibliotecas",
-      description: "A study on data mining techniques applied to systematized library environments.",
-      year: "2018",
-    },
-    {
-      title: "Carros de Combate na Selva: Utilização de VBCCCs no Teatro de Operações da Amazônia",
-      description: "A publication on combat vehicles in jungle environments, focusing on operations in the Amazon.",
-      year: "2017",
-    },
-  ],
-}
+  publications: [],
+};
 
-export default resumeData
+export default resumeData;

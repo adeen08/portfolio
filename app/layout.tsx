@@ -1,47 +1,59 @@
-import type React from "react"
-import type { Metadata } from "next/dist/lib/metadata/types/metadata-interface"
-import ClientLayout from "./ClientLayout"
+import type React from "react";
+import type { Metadata } from "next";
+import ClientLayout from "./ClientLayout";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Giovani Moutinho | Senior Software Engineer",
-    template: "%s | Giovani Moutinho",
+    default: "Adeen Amir | Full Stack Web Developer & AI Developer",
+    template: "%s | Adeen Amir",
   },
   description:
-    "Senior Software Engineer specializing in backend development with Python, FastAPI, and cloud solutions.",
-  keywords: ["Software Engineer", "Python Developer", "FastAPI", "GraphQL", "Backend Development", "Giovani Moutinho"],
-  authors: [{ name: "Giovani Moutinho" }],
-  creator: "Giovani Moutinho",
+    "Full Stack Developer and AI enthusiast with hands-on experience in web development, NLP, and cloud solutions.",
+  keywords: [
+    "Full Stack Developer",
+    "Adeen Amir",
+    "Next.js",
+    "React",
+    "Node.js",
+    "Python",
+    "FastAPI",
+    "NLP",
+    "MongoDB",
+    "PostgreSQL",
+    "OpenAI",
+    "AI Tools",
+    "Job Automation",
+  ],
+  authors: [{ name: "Adeen Amir" }],
+  creator: "Adeen Amir",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mgiovani.com",
-    title: "Giovani Moutinho | Senior Software Engineer",
+    url: "", // Replace with your actual portfolio domain if different
+    title: "Adeen Amir | Full Stack & AI Developer",
     description:
-      "Senior Software Engineer specializing in backend development with Python, FastAPI, and cloud solutions.",
-    siteName: "Giovani Moutinho Portfolio",
+      "Portfolio of Adeen Amir – showcasing full stack web apps, AI projects, and cloud-powered solutions.",
+    siteName: "Adeen Amir Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Giovani Moutinho | Senior Software Engineer",
+    title: "Adeen Amir | Full Stack & AI Developer",
     description:
-      "Senior Software Engineer specializing in backend development with Python, FastAPI, and cloud solutions.",
+      "Experienced in Next.js, Node, FastAPI, NLP, and building AI-powered web platforms.",
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
-  return <ClientLayout>{children}</ClientLayout>
+  return <ClientLayout>{children}</ClientLayout>;
 }
-
-
-import './globals.css'

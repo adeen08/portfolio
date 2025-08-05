@@ -1,60 +1,80 @@
 export type Project = {
-  id: number
-  title: string
-  description: string
-  image?: string | null
-  tags: string[]
-  github: string
-  demo: string | null
-}
+  id: number;
+  title: string;
+  description: string;
+  image?: string | null;
+  tags: string[];
+  github: string | null;
+  demo: string | null;
+};
 
 const projects: Project[] = [
   {
-    id: 4,
-    title: "AI Cursor Init",
-    description:
-      "The AI-powered documentation framework that lives inside your IDE. Generate Architecture Decision Records, system diagrams, and onboarding guides with simple slash commands.",
-    image:
-      "https://github.com/mgiovani/ai-cursor-init/raw/main/images/system-architecture-example.png",
-    tags: ["AI", "Documentation", "IDE", "Framework"],
-    github: "https://github.com/mgiovani/ai-cursor-init/",
-    demo: "https://github.com/mgiovani/ai-cursor-init/?tab=readme-ov-file#-visual-showcase",
-  },
-  {
     id: 1,
-    title: "MyInstants Discord Bot",
-    description: "A discord bot to play MyInstants sounds to your friends.",
-    image:
-      "https://camo.githubusercontent.com/4b1917eff3bda4e61188df670776876b702136fb1dfb9fcbd4bdb8d68189069d/68747470733a2f2f696d616765732d6e612e73736c2d696d616765732d616d617a6f6e2e636f6d2f696d616765732f492f36314c4e416f324b39524c2e706e67",
-    tags: ["Python", "Discord", "Bot"],
-    github: "https://github.com/mgiovani/my-instants-discord-bot",
-    demo: "https://discord.com/oauth2/authorize?client_id=836019264124354571",
+    title: "KairosAI - AI Tool for Automating Job Applications",
+    description:
+      "AI-powered job platform using Next.js, Node.js, and OpenAI to parse and optimize resumes, scrape job listings, and conduct mock interviews.",
+    image: "/images/kairos-1.png",
+    tags: ["Next.js", "Node.js", "OpenAI", "Supabase", "Web Scraping"],
+    github: null,
+    demo: "https://kairos-ai-two.vercel.app",
   },
   {
     id: 2,
-    title: "Base 16 Whatsapp Theme",
-    description: "A Whatsapp Web theme inspired by the Dark Base 16 colors.",
-    image:
-      "https://camo.githubusercontent.com/1b6684c7c3ad58073423a154fa0709eb215c096fec5aa32b6a430240aaa7ce55/68747470733a2f2f692e696d6775722e636f6d2f733134694f54392e706e67",
-    tags: ["CSS", "Javascript"],
-    github: "https://github.com/mgiovani/base16-whatsapp",
-    demo: null,
+    title: "PowerUp - Web App",
+    description:
+      "Redesigned the PowerUp website using Next.js, React.js, and Tailwind. Integrated psychometric profiles for health insights.",
+    image: "/images/powerup-1.png",
+
+    tags: ["Next.js", "React", "Tailwind", "Health"],
+    github: null,
+    demo: "https://app.powerupglobal.io",
   },
   {
     id: 3,
-    title: "Covid Data Tracker",
+    title: "PowerUp - Mobile App",
     description:
-      "API, OCR, and data extraction to track Covid cases in Montes Claros - Brazil.",
+      "React Native app integrating Apple HealthKit and Android Health Connect. Added AI-powered blood pressure image extraction and syncing.",
+    image: "/images/powerup-appstore-1.jpeg",
+    tags: ["React Native", "Expo", "HealthKit", "AI"],
+    github: null,
+    demo: "https://apps.apple.com/us/app/powerup-individual/id6743502030?uo=4",
+  },
+  {
+    id: 4,
+    title: "Natours",
+    description:
+      "Developed a fully responsive and animated landing page for a fictional tour company using HTML, CSS3, and SASS.",
+    image: "/images/Natours-1.png",
+    tags: ["HTML", "CSS3", "SASS", "Front-end"],
+    github: "https://github.com/adeen08/Natours",
+    demo: "https://adeen08.github.io/Natours",
+  },
+  {
+    id: 5,
+    title: "Castle of Charms",
+    description:
+      "A fantasy-inspired webpage blending Harry Potter themes with modern design elements for a magical web experience.",
+    image: "/images/castle.png",
+    tags: ["HTML", "CSS", "Fantasy", "Design"],
+    github: null,
+    demo: "https://castleof-charms.vercel.app/home.html",
+  },
+  {
+    id: 6,
+    title: "Smart Attendance System Using FaceNet",
+    description:
+      "Mobile app built with React Native and Flask backend to streamline attendance tracking using MTCNN and FaceNet. Improved recognition accuracy from 67% to 86%.",
     image: null,
-    tags: ["Python", "Go", "Docker"],
-    github: "https://github.com/mgiovani/mocorona",
+    tags: ["React Native", "Flask", "FaceNet", "MTCNN", "AI"],
+    github: null,
     demo: null,
   },
-]
+];
 
-export const featuredProjects = [projects[0], projects[1], projects[2]]
+export const featuredProjects = [projects[0], projects[1], projects[2]];
 
 export default {
   projects,
   featuredProjects,
-}
+};
